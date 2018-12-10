@@ -1,36 +1,58 @@
-.dd-wrapper {
-  width: 300px;
-  height: 30px;
-  border: 1px solid gray;
-  display: flex;
-  /* flex-flow: row wrap; */
-  justify-content: space-between;
-  align-items: center;
+.wrapper {
+    margin-left: 10px;
 }
 
-.title,
-.image {
-  padding: 5px;
+.dd-container {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid gray;
 }
 
-.list-container {
-  width: 300px;
-  border: 1px solid gray;
-  padding-left: 0px;
-  margin: 0;
+.dd-container.dd-open {
+    border: 1px solid rgb(0, 0, 255);
 }
 
-.list-item {
-  list-style: none;
-  text-align: left;
-  padding: 5px 0px;
+.image-container,
+.select {
+    padding: 5px;
 }
 
-.dd-icon-open {
-  transform: rotate(180deg);
-  transition: 0.2s;
+.image-container.dd-open {
+    transform: rotate(180deg);
 }
 
-.dd-icon-closed {
-  transition: 0.2s;
+.image-container.dd-open,
+.image-container.dd-closed {
+    transition: .2s all ease;
 }
+
+ul {
+    border: grey solid 1px;
+    border-top: none;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+.dd-item {
+    list-style-type: none;
+    text-align: left;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.selected {
+    background: grey;
+    color: white;
+}
+
+.dd-item:hover {
+    background-color: lightgrey
+}
+
+.selected:hover {
+    background-color: grey;
+}
+
