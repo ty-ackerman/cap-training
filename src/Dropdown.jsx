@@ -1,6 +1,13 @@
 import React, {Component} from "react"
 import "./dropdown_styles.css"
 
+// TODOS:
+// 1. Read the ref related code again, understand it.
+//  DONE 2. Enchance this dd func a little : if i select "bulbasaur", the plceholder should be replaced with the chosen value and the dd-closes (tricky!!!)
+// 3. accessibility : keyboard ( TAB -> FOCUS, ARROW KEY NAVIAGTION, ESC -> Closes, ENTER-> Selects and does step 2)
+// 4. DONE CSS -> outline shadow, transperant, hover an item, change its color, when the dd is open, the border changes color to show its open
+// 5. gist/github repo for debugging/helps
+
 const arrow = require("./down-arrow.png")
 const ddItems = [
     { id: 1, name: "Bulbasaur", level: "grass" },
@@ -39,6 +46,8 @@ class Dropdown extends Component {
 
     getText = event => {
         this.setState({selectedText: event.target.textContent})
+        this.setState({displayDD: false})
+        document.removeEventListener("click", this.closeDD)
     }
 
     changeClass = (nodeText, selected) => {

@@ -20,12 +20,12 @@
     padding: 5px;
 }
 
-.image-container.dd-open {
+.image-container .dd-open {
     transform: rotate(180deg);
 }
 
-.image-container.dd-open,
-.image-container.dd-closed {
+.image-container .dd-open,
+.image-container .dd-closed {
     transition: .2s all ease;
 }
 
