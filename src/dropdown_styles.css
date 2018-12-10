@@ -1,0 +1,36 @@
+.dd-wrapper {
+  width: 300px;
+  height: 30px;
+  border: 1px solid gray;
+  display: flex;
+  /* flex-flow: row wrap; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title,
+.image {
+  padding: 5px;
+}
+
+.list-container {
+  width: 300px;
+  border: 1px solid gray;
+  padding-left: 0px;
+  margin: 0;
+}
+
+.list-item {
+  list-style: none;
+  text-align: left;
+  padding: 5px 0px;
+}
+
+.dd-icon-open {
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+
+.dd-icon-closed {
+  transition: 0.2s;
+}
